@@ -17,8 +17,8 @@ fi
 
 bspc config border_width 3
 bspc config window_gap 4
-bspc config normal_border_color '#d3d3d3'
-bspc config active_border_color '#d3d3d3'
+bspc config normal_border_color '#6272A4'
+bspc config active_border_color '#6272A4'
 
 bspc config top_padding 32
 
@@ -26,7 +26,7 @@ bspc config split_ratio 0.7
 bspc config borderless_monocle true
 bspc config gapless_monocle true
 
-bspc config focused_border_color '#571D3F'
+bspc config focused_border_color '#44475A'
 #bspc config focused_border_width 10
 
 #bspc rule -a Gimp desktop='^8' state=floating follow=on
