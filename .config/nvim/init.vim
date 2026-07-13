@@ -328,6 +328,20 @@ lua << EOF
     root_markers = { '.git' },
     })
 	vim.lsp.enable('bash')
+
+    
+    vim.lsp.config('rlang', {
+      --- ```r
+      --- install.packages("languageserver")
+      --- ```
+	  capabilities = capabilities,
+      cmd = { 'R', '--no-echo', '-e', 'languageserver::run()' },
+      filetypes = { 'r', 'rmd', 'quarto' },
+      root_dir = function(bufnr, on_dir)
+        on_dir(vim.fs.root(bufnr, '.git') or vim.uv.os_homedir())
+      end,
+    })
+    vim.lsp.enable('rlang')
 EOF
 
 lua << EOF
